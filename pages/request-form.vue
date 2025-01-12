@@ -1,27 +1,27 @@
 <template>
   <v-container>
-    <h1>Formulário de Solicitação</h1>
-
+    <h2>Solicitação de Emergência</h2>
     <v-form>
-      <v-text-field label="Nome" required></v-text-field>
-      <v-text-field label="Localização" required></v-text-field>
-      <v-select
-          :items="['Troca de Lâmpada', 'Solicitação de Patrulha']"
-          label="Tipo de Solicitação"
-          required
-      ></v-select>
-      <v-textarea label="Descrição" required></v-textarea>
-      <v-btn color="primary" class="mt-4" @click="submitRequest">Enviar</v-btn>
+      <v-text-field label="Nome" v-model="name" required></v-text-field>
+      <v-text-field label="Localização" v-model="location" required></v-text-field>
+      <v-btn color="red" @click="sendRequest">Enviar Solicitação</v-btn>
     </v-form>
   </v-container>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      name: '',
+      location: '',
+    };
+  },
   methods: {
-    submitRequest() {
-      alert('Solicitação enviada com sucesso!')
+    sendRequest() {
+      // Enviar a solicitação para o backend
+      alert(`Solicitação de ${this.name} enviada com sucesso!`);
     },
   },
-}
+};
 </script>

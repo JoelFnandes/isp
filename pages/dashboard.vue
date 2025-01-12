@@ -14,7 +14,7 @@
 import LightStatus from '@/components/light-status.vue'
 import EnergyConsumption from '@/components/energy-consumption.vue'
 import Alerts from '@/components/alerts.vue'
-import MapView from '@/components/map-view.vue'
+import MapView from '@/components/map-view.vue';
 
 export default {
   components: {

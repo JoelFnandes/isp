@@ -1,4 +1,3 @@
-// EnergyConsumption.vue
 <template>
   <v-card>
     <v-card-title>Consumo de Energia</v-card-title>
