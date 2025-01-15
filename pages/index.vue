@@ -23,6 +23,8 @@
 </template>
 
 <script>
+import { ligarLuzes } from "~/helpers/API.js";
+
 export default {
   data() {
     return {
@@ -30,8 +32,17 @@ export default {
     }
   },
   methods: {
-    toggleLights() {
-      this.lightsOn = !this.lightsOn
+    async toggleLights() {
+      this.lightsOn = !this.lightsOn;
+      try {
+        const status = this.lightsOn ? 'ligado' : 'desligado';
+        const dispositivo = 'luzes'; // você pode substituir conforme necessário
+        // Chamando o método para ligar/desligar as luzes via API
+        const resultado = await ligarLuzes(status, dispositivo);
+        console.log('Resposta da API:', resultado);
+      } catch (error) {
+        console.error('Erro ao controlar luzes:', error);
+      }
     },
   },
 }

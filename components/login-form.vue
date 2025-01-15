@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import AuthenticationRoutes from '@/api/AuthenticationRoutes';
+import AuthenticationRoutes from '~/helpers/AuthenticationRoutes';
 import LoginDTO from "@/dto/LoginDTO"
 export default {
     data() {

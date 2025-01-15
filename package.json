@@ -13,6 +13,7 @@
     "@mdi/font": "^7.4.47",
     "@nuxtjs/leaflet": "^1.2.6",
     "@vueuse/core": "^12.4.0",
+    "axios": "^1.7.9",
     "leaflet": "^1.9.4",
     "leaflet-fullscreen": "^1.0.2",
     "leaflet-sidebar": "^0.2.4",
